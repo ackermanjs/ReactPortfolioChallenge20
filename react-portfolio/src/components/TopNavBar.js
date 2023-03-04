@@ -1,18 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { Navbar, Nav, Container } from "react-bootstrap";
 
 function TopNavBar() {
   return (
-    <nav className="top-nav-bar">
-      <div className="nav-left">
-        <Link to="/">Jeffrey Ackerman</Link>
-      </div>
-      <div className="nav-right">
-        <Link to="/about">About Me</Link>
-        <Link to="/projects">Projects</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-    </nav>
+    <Navbar bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#">Jeffrey Ackerman</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="#about-me">About Me</Nav.Link>
+          <Nav.Link href="#my-projects">My Projects</Nav.Link>
+          <Nav.Link href="#contact-me">Contact Me</Nav.Link>
+        </Nav>
+      </Container>
+    </Navbar>
   );
 }
 

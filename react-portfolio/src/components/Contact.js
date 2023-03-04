@@ -1,12 +1,12 @@
-import React from 'react';
-import ContactForm from './ContactForm';
+import { Container } from "react-bootstrap";
+import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
     <div>
-      <h2>Contact</h2>
-      <p>My contact information.</p>
-      <ContactForm />
+      <Container>
+        <ContactForm />
+      </Container>
     </div>
   );
 }

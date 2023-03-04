@@ -1,26 +1,19 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import TopNavBar from "./components/TopNavBar";
-import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 function App() {
   return (
-    <div>
-      <TopNavBar />
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-    </div>
+    <Router>
+      <div>
+        <TopNavBar />
+        <Route path="/projects" component={Projects} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
+      </div>
+    </Router>
   );
 }
 

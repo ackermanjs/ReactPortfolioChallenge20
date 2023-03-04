@@ -1,28 +1,42 @@
-import React from 'react';
-import './projects.css';
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 function Projects() {
-  const projects = [
-    { id: 1, name: 'Project 1', image: 'https://picsum.photos/id/1/200/200' },
-    { id: 2, name: 'Project 2', image: 'https://picsum.photos/id/2/200/200' },
-    { id: 3, name: 'Project 3', image: 'https://picsum.photos/id/3/200/200' },
-    { id: 4, name: 'Project 4', image: 'https://picsum.photos/id/4/200/200' },
-    { id: 5, name: 'Project 5', image: 'https://picsum.photos/id/5/200/200' },
-    { id: 6, name: 'Project 6', image: 'https://picsum.photos/id/6/200/200' },
-  ];
-
   return (
-    <div className="projects-container">
-      <h2>Projects</h2>
-      <div className="projects-grid">
-        {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <img src={project.image} alt={project.name} />
-            <h3>{project.name}</h3>
-          </div>
-        ))}
-      </div>
-    </div>
+    <Container>
+      <h2>My Projects</h2>
+      <Row>
+        <Col md={4}>
+          <Card>
+            <Card.Img variant="top" src="/project1.jpg" />
+            <Card.Body>
+              <Card.Title>Project 1</Card.Title>
+              <Card.Text>This is a short description of project 1.</Card.Text>
+              <Button variant="primary">Learn More</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <Card.Img variant="top" src="/project2.jpg" />
+            <Card.Body>
+              <Card.Title>Project 2</Card.Title>
+              <Card.Text>This is a short description of project 2.</Card.Text>
+              <Button variant="primary">Learn More</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col md={4}>
+          <Card>
+            <Card.Img variant="top" src="/project3.jpg" />
+            <Card.Body>
+              <Card.Title>Project 3</Card.Title>
+              <Card.Text>This is a short description of project 3.</Card.Text>
+              <Button variant="primary">Learn More</Button>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
